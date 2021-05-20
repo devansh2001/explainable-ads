@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import ReactScreenshot from './ReactScreenshot';
+import ReactSSExample from './ReactSSExample';
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
         >
           Learn React
         </a>
+        <ReactSSExample />
       </header>
     </div>
   );
