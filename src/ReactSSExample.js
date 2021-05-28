@@ -3,13 +3,14 @@ import * as React from "react";
 import { useScreenshot } from "use-screenshot-hook";
 
 const Example = () => {
-  const { image, takeScreenshot } = useScreenshot({ref: document.getElementById('some-id')});
+  const myRef = React.useRef();
+  const { image, takeScreenshot } = useScreenshot({ref: myRef});
   return (
     <div>
-        <div id='some-id' style={{border: '1px solid red'}}>
-            <h1>Hello World!</h1>
-            <button>Button</button>
-            <p>This is some text content</p>
+        <div style={{border: '1px solid red'}}>
+            <h1>Hello World A!</h1>
+            <button ref={myRef}>Button</button>
+            <p>This is some text content lala</p>
         </div>
         <button onClick={() => takeScreenshot()}>Take Screenshot</button>
         {image && <img src={image} />}
