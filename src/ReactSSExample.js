@@ -7,10 +7,11 @@ const Example = () => {
   const { image, takeScreenshot } = useScreenshot({ref: myRef});
   return (
     <div>
-        <div style={{border: '1px solid red'}}>
-            <h1>Hello World A!</h1>
-            <button ref={myRef}>Button</button>
-            <p>This is some text content lala</p>
+        <div ref={myRef} style={{border: '1px solid red'}}>
+            <h1>Hello World!</h1>
+            <button>Button</button>
+            <p>This is some text content</p>
+            <iframe src='https://www.google.com'>Hi</iframe>
         </div>
         <button onClick={() => takeScreenshot()}>Take Screenshot</button>
         {image && <img src={image} />}
